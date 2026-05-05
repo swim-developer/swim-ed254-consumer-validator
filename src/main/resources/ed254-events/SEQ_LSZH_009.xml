@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T16:51:00Z</creationTime>
+    <publicationTime>2026-04-08T16:51:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>false</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>LSZH</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:14:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_STABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>E190</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>32L</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:51:00Z</amanTargetTimeOver>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>SPESA</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT AMRAM</routeAdvisory>
+                    <speedAdvisory>MACH 0.75</speedAdvisory>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>SWR2729</arcid>
+                <ades>LSZH</ades>
+                <adep>EDDM</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T15:51:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EDDM">6a76c309-97b0-4fc7-9c3a-e0f44f4a4fbf</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:19:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_UNSTABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>E190</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>07R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:54:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT8M9S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>SITET</pointName>
+                <pointUsage>FINAL_APPROACH_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>THY766</arcid>
+                <ades>LSZH</ades>
+                <adep>LFLL</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:51:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LFLL">c8ab9e8d-2e00-4b24-b091-23609a57ddd6</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:20:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_UNSTABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>CRJ9</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25L</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>RYR5835</arcid>
+                <ades>LSZH</ades>
+                <adep>LFPG</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T13:51:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LFPG">e0e4c701-7b50-4b7c-ae5a-d32674c23c48</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:23:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>HAS_LANDED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>4</sequenceNumber>
+            <typeOfAircraft>B789</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T17:12:00Z</amanTargetTimeOver>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>BOMBI</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT LURAC</routeAdvisory>
+                    <speedAdvisory>MACH 0.84</speedAdvisory>
+                    <timeToGainOrLose>100</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>SAS1803</arcid>
+                <ades>LSZH</ades>
+                <adep>EIDW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:51:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EIDW">0b6f54e7-06e5-4afe-b9b3-3c7298ba775e</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:31:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>DESEQUENCED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>5</sequenceNumber>
+            <typeOfAircraft>B789</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>J</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>07L</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>RYR8695</arcid>
+                <ades>LSZH</ades>
+                <adep>LEMD</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T04:51:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LEMD">6d33285e-eb3e-422e-868f-9bcbc990b322</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:29:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>IS_ON_FINAL</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>6</sequenceNumber>
+            <typeOfAircraft>B772</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T17:21:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT2M10S</delayAtPoint>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>GAVOS</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT BOMBI</routeAdvisory>
+                    <speedAdvisory>MACH 0.75</speedAdvisory>
+                    <timeToGainOrLose>-254</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AFR1326</arcid>
+                <ades>LSZH</ades>
+                <adep>LOWW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T11:51:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">5a9073b1-7a95-436c-b9fc-6e307fcb9d87</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

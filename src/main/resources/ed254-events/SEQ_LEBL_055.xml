@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T18:39:00Z</creationTime>
+    <publicationTime>2026-04-08T18:39:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>false</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>LEBL</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:02:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>MANUAL_INTERVENTION</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>A320</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>J</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>09</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:51:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT8M58S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>NUNOS</pointName>
+                <pointUsage>INITIAL_APPROACH_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT MALOT</routeAdvisory>
+                    <timeToGainOrLose>-275</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AUA9287</arcid>
+                <ades>LEBL</ades>
+                <adep>LSZH</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T06:39:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">efa7d1b7-c3bb-440e-99e3-6fa798236edd</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>269</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:11:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_STABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>B738</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>J</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>32L</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>TRA6272</arcid>
+                <ades>LEBL</ades>
+                <adep>LEPA</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T07:39:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LEPA">7fb7fec7-afe4-4a09-9fc1-770a395fb4d6</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:11:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_STABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>B789</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>03</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:58:00Z</amanTargetTimeOver>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>ODINA</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>EIN6028</arcid>
+                <ades>LEBL</ades>
+                <adep>EKCH</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T17:39:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">a3c55d73-ca2d-481e-a682-142e4f74a9aa</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

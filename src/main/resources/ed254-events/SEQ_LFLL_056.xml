@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T19:02:00Z</creationTime>
+    <publicationTime>2026-04-08T19:02:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>true</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>LFLL</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:26:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>HAS_LANDED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>A320</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>27L</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>NAX4374</arcid>
+                <ades>LFLL</ades>
+                <adep>EDDB</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T15:02:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">3e54e264-8537-4868-b038-a46e2d2b0785</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:30:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>DESEQUENCED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>CRJ9</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>09</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:19:00Z</amanTargetTimeOver>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>SUGOL</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>NAX1477</arcid>
+                <ades>LFLL</ades>
+                <adep>LOWW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:02:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">e495834d-51e4-465f-a25c-31dd25b9c2d6</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:37:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>E190</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18C</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:29:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT1M9S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>LURAC</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT TOUKA</routeAdvisory>
+                    <speedAdvisory>MACH 0.77</speedAdvisory>
+                    <timeToGainOrLose>-121</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>BAW1982</arcid>
+                <ades>LFLL</ades>
+                <adep>EDDB</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T14:02:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EDDB">c19725b8-4b4c-499a-991d-545ae7e0dc85</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:34:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>4</sequenceNumber>
+            <typeOfAircraft>A319</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>27R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:10:00Z</amanTargetTimeOver>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>LURAC</pointName>
+                <pointUsage>INITIAL_APPROACH_FIX</pointUsage>
+                <advisoryInformation>
+                    <speedAdvisory>MACH 0.74</speedAdvisory>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AFR1293</arcid>
+                <ades>LFLL</ades>
+                <adep>LFMN</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T15:02:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">20c20381-1e2b-4285-9332-178f1de74a66</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:47:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_UNSTABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>5</sequenceNumber>
+            <typeOfAircraft>CRJ9</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18C</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:38:00Z</amanTargetTimeOver>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>KONAN</pointName>
+                <pointUsage>COORDINATION</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>TRA5761</arcid>
+                <ades>LFLL</ades>
+                <adep>EDDB</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T11:02:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">feace2a5-81e2-4d8d-a138-73320e032677</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T15:05:00Z</creationTime>
+    <publicationTime>2026-04-08T15:05:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>true</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>ESSA</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T15:30:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>B738</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>03</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>BAW5508</arcid>
+                <ades>ESSA</ades>
+                <adep>LPPT</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T04:05:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LPPT">613cf713-060e-4a87-9e16-263c09805d47</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>575</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T15:33:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>IS_ON_FINAL</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>A319</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>07R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T15:19:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT1M23S</delayAtPoint>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>GAVOS</pointName>
+                <pointUsage>METERING_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AUA8813</arcid>
+                <ades>ESSA</ades>
+                <adep>LOWW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T07:05:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LOWW">3559d6ca-353a-4e09-a8f0-5fc31d9872d4</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

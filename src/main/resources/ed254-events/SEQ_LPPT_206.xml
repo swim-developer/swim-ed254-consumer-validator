@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T19:08:00Z</creationTime>
+    <publicationTime>2026-04-08T19:08:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>false</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>LPPT</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:33:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>B772</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:13:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT8M31S</delayAtPoint>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>SUGOL</pointName>
+                <pointUsage>FINAL_APPROACH_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>SWR6221</arcid>
+                <ades>LPPT</ades>
+                <adep>LEMD</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:08:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LEMD">51c1dd3a-e48b-4622-ae4a-0bf3782a93e0</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>418</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:34:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>A319</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>07L</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:11:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT8M26S</delayAtPoint>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>SITET</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT KONAN</routeAdvisory>
+                    <speedAdvisory>MACH 0.71</speedAdvisory>
+                    <timeToGainOrLose>-133</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AFR669</arcid>
+                <ades>LPPT</ades>
+                <adep>EDDF</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T14:08:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EDDF">a98b937b-0e6d-44aa-a004-c72c7fefc65c</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T19:40:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_UNSTABLE</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>A388</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T19:23:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT1M12S</delayAtPoint>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>NUNOS</pointName>
+                <pointUsage>COORDINATION</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>RYR6508</arcid>
+                <ades>LPPT</ades>
+                <adep>EDDB</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T12:08:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">d10e060d-8700-4c84-8010-814a36d541a4</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

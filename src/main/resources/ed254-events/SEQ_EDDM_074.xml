@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T17:53:00Z</creationTime>
+    <publicationTime>2026-04-08T17:53:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>false</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>EDDM</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:19:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>HAS_LANDED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>E190</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18C</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T17:59:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT1M2S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>TOUKA</pointName>
+                <pointUsage>FINAL_APPROACH_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT SPESA</routeAdvisory>
+                    <speedAdvisory>MACH 0.69</speedAdvisory>
+                    <timeToGainOrLose>203</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>DLH6009</arcid>
+                <ades>EDDM</ades>
+                <adep>LIRF</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T12:53:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">df28e05e-08a8-48af-a334-b7fd6ef3de99</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:25:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>HAS_LANDED</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>E195</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>09</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:02:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT5M34S</delayAtPoint>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>UNOKO</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AFR1114</arcid>
+                <ades>EDDM</ades>
+                <adep>EGKK</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:53:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EGKK">09c065e4-185e-4cf3-98c8-ab4944bfa8e1</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:25:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>IS_ON_FINAL</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>CRJ9</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>32R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:09:00Z</amanTargetTimeOver>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>SITET</pointName>
+                <pointUsage>FINAL_APPROACH_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>BEL2298</arcid>
+                <ades>EDDM</ades>
+                <adep>EDDF</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T09:53:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">1b7d8031-a6c7-421d-bc86-11bdf9845e5b</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:25:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>4</sequenceNumber>
+            <typeOfAircraft>E190</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:14:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT4M58S</delayAtPoint>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>ODINA</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT ODINA</routeAdvisory>
+                    <speedAdvisory>MACH 0.84</speedAdvisory>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>TAP2427</arcid>
+                <ades>EDDM</ades>
+                <adep>LOWW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T05:53:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">f11b183c-d691-4834-820b-fab9facab8aa</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:43:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>5</sequenceNumber>
+            <typeOfAircraft>A319</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>J</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>01R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:28:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT5M49S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>UNOKO</pointName>
+                <pointUsage>COORDINATION</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>AUA8509</arcid>
+                <ades>EDDM</ades>
+                <adep>LEMD</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T15:53:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">e6d78ba3-402b-4bb4-b530-8e27e50ad1b2</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T18:43:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>MANUAL_INTERVENTION</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>6</sequenceNumber>
+            <typeOfAircraft>B738</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>H</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>32L</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T18:29:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT2M37S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>LURAC</pointName>
+                <pointUsage>INITIAL_METERING_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>IBE2940</arcid>
+                <ades>EDDM</ades>
+                <adep>EDDL</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T05:53:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">b54eaeb8-ba87-40ea-8f9e-36f9c903cb4f</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>424</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is FICTITIOUS TEST DATA generated for the SWIM Developer project.
+     Data model based on EUROCAE ED-254 (Arrival Sequence Service Performance Standard)
+     and FIXM 4.3 (Flight Information Exchange Model).
+     All validation credits belong to their respective owners (EUROCAE, FIXM CCB, EUROCONTROL).
+
+     THIS FICTITIOUS DATA SET IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+     INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+     FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+
+     Created by Marcelo Sales (marcelo.d.sales@gmail.com) for the SWIM Developer project.
+     Project: https://github.com/orgs/swim-developer/repositories
+     Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
+     All credits to the original specification authors must be preserved. -->
+<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+                 xmlns:fb="http://www.fixm.aero/base/4.3"
+                 xmlns:fx="http://www.fixm.aero/flight/4.3">
+    <creationTime>2026-04-08T16:21:00Z</creationTime>
+    <publicationTime>2026-04-08T16:21:01.000Z</publicationTime>
+    <firstMessageAfterServiceOutage>false</firstMessageAfterServiceOutage>
+    <aerodromeDesignator>EDDF</aerodromeDesignator>
+    <sequenceEntries>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T16:44:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>1</sequenceNumber>
+            <typeOfAircraft>A320</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>09</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:21:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT1M20S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>SPESA</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+                <advisoryInformation>
+                    <routeAdvisory>DIRECT SITET</routeAdvisory>
+                    <speedAdvisory>MACH 0.79</speedAdvisory>
+                    <timeToGainOrLose>60</timeToGainOrLose>
+                </advisoryInformation>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>EIN2480</arcid>
+                <ades>EDDF</ades>
+                <adep>LEPA</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T04:21:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LEPA">6f42cf22-7d0e-46d3-8e23-c2a83147cc92</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T16:53:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>2</sequenceNumber>
+            <typeOfAircraft>A320</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:33:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT5M41S</delayAtPoint>
+                <planningStatus>CONTROLLED_TIME</planningStatus>
+                <pointName>SITET</pointName>
+                <pointUsage>INITIAL_APPROACH_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>RYR6926</arcid>
+                <ades>EDDF</ades>
+                <adep>LIMC</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T06:21:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LIMC">31a85ed2-711c-4ac7-adab-bbb1ee667317</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T16:53:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>MANUAL_INTERVENTION</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>3</sequenceNumber>
+            <typeOfAircraft>A320</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>07R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:31:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT2M</delayAtPoint>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>SPESA</pointName>
+                <pointUsage>COORDINATION</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>TRA8256</arcid>
+                <ades>EDDF</ades>
+                <adep>EIDW</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T12:21:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="EIDW">f2a6d73c-2960-476f-b464-9a18379c7b67</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>482</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:05:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>4</sequenceNumber>
+            <typeOfAircraft>A388</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>M</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>18R</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:48:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT8M31S</delayAtPoint>
+                <planningStatus>TARGET_TIME</planningStatus>
+                <pointName>KONAN</pointName>
+                <pointUsage>METERING_FIX</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>THY5775</arcid>
+                <ades>EDDF</ades>
+                <adep>LEBL</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T12:21:00Z"
+                      namespaceDomain="LOCATION_INDICATOR"
+                      namespaceIdentifier="LEBL">270db6b8-24b0-4008-ad02-de766c16e5f3</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>425</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T17:01:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>SEQUENCED_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>false</lastFiledRecord>
+            <sequenceNumber>5</sequenceNumber>
+            <typeOfAircraft>A321</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>01L</assignedArrivalRunway>
+            <meteringInformation>
+                <amanTargetTimeOver>2026-04-08T16:53:00Z</amanTargetTimeOver>
+                <delayAtPoint>PT9M40S</delayAtPoint>
+                <planningStatus>ESTIMATED_TIME</planningStatus>
+                <pointName>BOMBI</pointName>
+                <pointUsage>STACK_EXIT</pointUsage>
+            </meteringInformation>
+            <flightIdentification>
+                <arcid>TRA7709</arcid>
+                <ades>EDDF</ades>
+                <adep>LSZH</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T04:21:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">3105631c-c966-4e6f-aec5-b64b813e4aee</gufi>
+            </flightIdentification>
+            <totalDelay>
+                <arrivalDelay>228</arrivalDelay>
+            </totalDelay>
+        </arrivalManagementInformation>
+        <arrivalManagementInformation>
+            <amanTargetLandingTime>2026-04-08T16:59:00Z</amanTargetLandingTime>
+            <arrivalManagementHandlingIndicator>TIME_FROZEN</arrivalManagementHandlingIndicator>
+            <lastFiledRecord>true</lastFiledRecord>
+            <sequenceNumber>6</sequenceNumber>
+            <typeOfAircraft>A388</typeOfAircraft>
+            <wakeTurbulenceIcaoCategory>L</wakeTurbulenceIcaoCategory>
+            <assignedArrivalRunway>25L</assignedArrivalRunway>
+            <flightIdentification>
+                <arcid>SWR7932</arcid>
+                <ades>EDDF</ades>
+                <adep>EHAM</adep>
+                <gufi codeSpace="urn:uuid"
+                      creationTime="2026-04-08T10:21:00Z"
+                      namespaceDomain="FULLY_QUALIFIED_DOMAIN_NAME"
+                      namespaceIdentifier="provider.swim.aero">fb1187c9-f8ca-4ec3-8978-de9dc1da1c5e</gufi>
+            </flightIdentification>
+        </arrivalManagementInformation>
+    </sequenceEntries>
+</arrivalSequence>

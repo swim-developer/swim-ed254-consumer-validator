@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ed254-consumer-validator-server-cert
+  namespace: swim-demo
+spec:
+  secretName: ed254-consumer-validator-server-tls
+  issuerRef:
+    name: swim-ca-issuer
+    kind: ClusterIssuer
+  commonName: swim-ed254-consumer-validator.apps.ocp4.masales.cloud
+  dnsNames:
+    - swim-ed254-consumer-validator.apps.ocp4.masales.cloud
+    - ed254-consumer-validator.swim-demo.svc
+    - ed254-consumer-validator.swim-demo.svc.cluster.local
+  usages:
+    - server auth
+  privateKey:
+    algorithm: RSA
+    size: 2048

@@ -1,0 +1,140 @@
+{#include layout}
+{#content}
+<div class="page-header">
+    <h2 class="page-title">Service Catalog</h2>
+    <p class="page-description">ED-254 Arrival Sequence Service — message types, filter dimensions, and operational context</p>
+</div>
+
+<div class="card">
+    <h3 class="card-title">Message Types (messageType)</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>XML Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>arrivalSequence</code></td><td>Complete arrival sequence snapshot with flight entries, metering info, and advisories</td><td>136</td></tr>
+                <tr><td><code>providerExceptions</code></td><td>AMAN service status notifications (unavailable, degraded, sequencing disabled)</td><td>3</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <h3 class="card-title">Aerodromes (aerodrome)</h3>
+    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px;">
+        Destination aerodromes for which arrival sequences are published. Each AMAN system manages one or more arrival runways.
+    </p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ICAO Code</th>
+                    <th>Name</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>LPPT</code></td><td>Lisboa Humberto Delgado</td><td>Portugal</td></tr>
+                <tr><td><code>LPPR</code></td><td>Porto Francisco Sá Carneiro</td><td>Portugal</td></tr>
+                <tr><td><code>LFPG</code></td><td>Paris Charles de Gaulle</td><td>France</td></tr>
+                <tr><td><code>EGLL</code></td><td>London Heathrow</td><td>United Kingdom</td></tr>
+                <tr><td><code>EDDF</code></td><td>Frankfurt</td><td>Germany</td></tr>
+                <tr><td><code>EHAM</code></td><td>Amsterdam Schiphol</td><td>Netherlands</td></tr>
+                <tr><td><code>LEMD</code></td><td>Madrid Barajas</td><td>Spain</td></tr>
+                <tr><td><code>LEVC</code></td><td>Valencia</td><td>Spain</td></tr>
+                <tr><td><code>LIRF</code></td><td>Rome Fiumicino</td><td>Italy</td></tr>
+                <tr><td><code>LFMN</code></td><td>Nice Côte d'Azur</td><td>France</td></tr>
+                <tr><td><code>EBBR</code></td><td>Brussels</td><td>Belgium</td></tr>
+                <tr><td><code>LOWW</code></td><td>Vienna</td><td>Austria</td></tr>
+                <tr><td><code>LSZH</code></td><td>Zurich</td><td>Switzerland</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <h3 class="card-title">Arrival Sequence Content</h3>
+    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px;">
+        Each <code>arrivalSequence</code> message contains the following key information per flight entry:
+    </p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                    <th>XSD Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>gufi</code></td><td>Globally Unique Flight Identifier (FIXM)</td><td>GloballyUniqueFlightIdentifierType</td></tr>
+                <tr><td><code>arcid</code></td><td>Aircraft identification (callsign)</td><td>AircraftIdentificationType</td></tr>
+                <tr><td><code>amanTargetLandingTime</code></td><td>Target landing time calculated by AMAN</td><td>DateTimeUtcType</td></tr>
+                <tr><td><code>amanTargetTimeOverMeteringFix</code></td><td>Target time over the metering fix</td><td>DateTimeUtcType</td></tr>
+                <tr><td><code>delayAtPoint</code></td><td>Delay absorbed at a point (ISO 8601 duration)</td><td>DurationType</td></tr>
+                <tr><td><code>arrivalManagementHandlingIndicator</code></td><td>Sequencing status (e.g., SEQUENCED_STABLE, FROZEN)</td><td>ArrivalManagementHandlingIndicatorType</td></tr>
+                <tr><td><code>wakeTurbulenceIcaoCategory</code></td><td>Wake turbulence category (L, M, H, J)</td><td>WakeTurbulenceIcaoCategoryType</td></tr>
+                <tr><td><code>advisoryInformation</code></td><td>Speed/route advisories for upstream controllers</td><td>AdvisoryInformationType</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <h3 class="card-title">Provider Exception Types</h3>
+    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px;">
+        <code>providerExceptions</code> messages signal AMAN system status changes:
+    </p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Exception</th>
+                    <th>Description</th>
+                    <th>Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>AMAN Unavailable</code></td><td>AMAN system is completely down</td><td>No arrival sequences published; upstream controllers revert to procedural control</td></tr>
+                <tr><td><code>Degraded Mode</code></td><td>AMAN running with reduced capability</td><td>Sequences may be less accurate; advisory information may be unavailable</td></tr>
+                <tr><td><code>Sequencing Disabled</code></td><td>Sequencing temporarily suspended for an aerodrome</td><td>Flights not assigned target times; controllers manage spacing manually</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <h3 class="card-title">Subscription Filters</h3>
+    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px;">
+        When creating a subscription, the consumer can specify filters to receive only relevant messages:
+    </p>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Filter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>aerodrome</code></td><td>String (ICAO code)</td><td>Filter by destination aerodrome (e.g., LFPG, EGLL)</td></tr>
+                <tr><td><code>messageType</code></td><td>String</td><td>Filter by message type: arrivalSequence or providerExceptions</td></tr>
+                <tr><td><code>includeSupplementaryData</code></td><td>Boolean</td><td>Include extended advisory information in sequence entries</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="alert alert-info">
+    <strong>Operational Context:</strong> Extended AMAN (E-AMAN) extends arrival sequencing from the traditional 40-100 NM to 150-350 NM from the destination airport. 
+    This enables upstream ANSPs to issue speed and route advisories to flights still in cruise, reducing fuel burn and airborne holding.
+    The ED-254 standard (EUROCAE, June 2018) defines the service interface bindings for cross-border E-AMAN operations under CP1 (EU Regulation 2021/116).
+</div>
+{/content}
+{/include}

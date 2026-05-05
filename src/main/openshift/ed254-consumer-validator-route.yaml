@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: ed254-consumer-validator-mtls
+  namespace: swim-demo
+  labels:
+    app: ed254-consumer-validator
+    app.kubernetes.io/name: ed254-consumer-validator
+    app.kubernetes.io/part-of: ed254-consumer-validator
+  annotations:
+    haproxy.router.openshift.io/timeout: 60s
+spec:
+  host: swim-ed254-consumer-validator.apps.ocp4.masales.cloud
+  to:
+    kind: Service
+    name: ed254-consumer-validator
+  port:
+    targetPort: https
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect

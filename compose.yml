@@ -1,0 +1,58 @@
+# Local development infrastructure for swim-ed254-consumer-validator.
+#
+# Starts:
+#   - ed254-consumer-validator-artemis : AMQP broker for event delivery
+#   - ed254-consumer-validator-mariadb : validator persistence
+#
+# Usage:
+#   podman compose up -d
+#   ./mvnw quarkus:dev   (starts validator on port 8085)
+
+services:
+
+  ed254-consumer-validator-artemis:
+    image: quay.io/artemiscloud/activemq-artemis-broker:artemis.2.38.0
+    container_name: ed254-consumer-validator-artemis
+    ports:
+      - "5676:5672"
+      - "8165:8161"
+    environment:
+      AMQ_USER: admin
+      AMQ_PASSWORD: admin
+    networks:
+      - swim-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8161/console/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  ed254-consumer-validator-mariadb:
+    image: docker.io/library/mariadb:12-ubi
+    container_name: ed254-consumer-validator-mariadb
+    ports:
+      - "3309:3306"
+    environment:
+      MARIADB_DATABASE: swim_ed254_consumer_validator
+      MARIADB_USER: swim
+      MARIADB_PASSWORD: swim
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ed254-consumer-validator-mariadb-data:/var/lib/mysql
+    networks:
+      - swim-network
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh --connect --innodb_initialized"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  ed254-consumer-validator-mariadb-data:
+
+networks:
+  swim-network:
+    name: swim-ed254-consumer-validator-network
+    driver: bridge
