@@ -6,7 +6,12 @@ MVN_NATIVE := -Dnative -DskipTests \
               -Dquarkus.native.container-runtime=podman
 IMAGE_NAME := swim-ed254-consumer-validator
 
-.PHONY: help jvm native-amd64 native-arm64 manifest push native
+PARENT_DIR  := $(abspath $(dir $(abspath $(lastword $(MAKEFILE_LIST))))/..)
+GITHUB_SSH  := git@github.com:swim-developer
+
+SYNC_DEPS := swim-developer-root swim-developer-framework swim-developer-validators
+
+.PHONY: help sync pull pull-deps install-deps jvm native-amd64 native-arm64 manifest push native
 
 help:
 	@echo ""
@@ -20,10 +25,59 @@ help:
 	@echo "    push            Push manifest to registry"
 	@echo "    native          Full native sequence (amd64 + arm64 + manifest + push)"
 	@echo ""
-	@echo "  Pre-requisite: shared modules must be installed in local Maven repo."
-	@echo "  Run once from swim-developer-validators: ./mvnw clean install -DskipTests"
+	@echo "  Local dev:"
+	@echo "    sync               Full setup: pull + pull-deps + install-deps"
+	@echo "    pull               Pull this project from remote"
+	@echo "    pull-deps          Clone missing deps + pull existing ones in $(PARENT_DIR)"
+	@echo "    install-deps       Install all deps into local Maven repository"
 	@echo ""
 	@echo "  Variables: REGISTRY=$(REGISTRY)  TAG=$(TAG)"
+
+sync: pull pull-deps install-deps
+
+pull:
+	@echo ""
+	@echo "  ── Pull this project ────────────────────────────────────────"
+	@git pull --ff-only
+	@echo ""
+
+pull-deps:
+	@echo ""
+	@echo "  ── Ensure sibling dependencies in $(PARENT_DIR) ─────────────"
+	@for repo in $(SYNC_DEPS); do \
+	  dir="$(PARENT_DIR)/$$repo"; \
+	  if [ ! -d "$$dir" ]; then \
+	    echo "  CLONE   $$repo"; \
+	    git clone "$(GITHUB_SSH)/$$repo.git" "$$dir" --quiet; \
+	  else \
+	    printf "  PULL    $$repo ... "; \
+	    git -C "$$dir" pull --ff-only --quiet 2>&1 && echo "ok" || echo "skipped (local changes or detached HEAD)"; \
+	  fi; \
+	done
+	@echo ""
+
+install-deps:
+	@echo ""
+	@echo "  ── Install dependencies into local Maven repository ─────────"
+	@for repo in $(SYNC_DEPS); do \
+	  dir="$(PARENT_DIR)/$$repo"; \
+	  if [ ! -d "$$dir" ]; then \
+	    echo "  SKIP    $$repo (not found — run: make pull-deps)"; \
+	    continue; \
+	  fi; \
+	  mvn_cmd="mvn"; \
+	  [ -f "$$dir/mvnw" ] && mvn_cmd="$$dir/mvnw"; \
+	  if [ "$$repo" = "swim-developer-root" ]; then \
+	    args="install -N -DskipTests -q"; \
+	  else \
+	    args="clean install -DskipTests -q"; \
+	  fi; \
+	  printf "  INSTALL $$repo ... "; \
+	  "$$mvn_cmd" -f "$$dir/pom.xml" $$args && echo "ok" || { echo "FAIL"; exit 1; }; \
+	done
+	@echo ""
+	@echo "  Done. Run: make jvm"
+	@echo ""
 
 jvm:
 	-podman rmi  $(REGISTRY)/$(IMAGE_NAME):$(TAG) 2>/dev/null
