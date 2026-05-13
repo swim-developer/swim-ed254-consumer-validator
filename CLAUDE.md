@@ -53,20 +53,9 @@ Run `make sync` to clone/pull and install all of them. Repeat when those repos a
 Hexagonal architecture (ports & adapters), layered as:
 
 ```
-domain/
-  model/          — ED-254-specific value objects (EventFileMetadata, FilterOptions)
-  port/in/        — inbound ports (Ed254EventMetadataPort, Ed254TopicPort)
-
-application/
-  usecase/        — port implementations (Ed254EventMetadataService, Ed254TopicService)
-
-infrastructure/
-  config/         — OpenAPI customization, GraalVM reflection config
-  rest/           — JAX-RS resources
-    dto/          — ED-254-specific request/response records
-    Ed254ApiResource      — SWIM API (/swim/v1/*) — subscriptions, topics, trigger
-    AdminResource         — Admin UI backend (/admin/*) — trigger, scenarios, faults, heartbeat, SSE console
-    Ed254UiResource       — HTML dashboard (/ui/*) — Qute templates
+domain/           Value objects, inbound ports (topic catalog, event metadata)
+application/      Port implementations (Ed254EventMetadataService, Ed254TopicService)
+infrastructure/   REST resources (/swim/v1/*, /admin/*, /ui/*), config, DTOs
 ```
 
 Most business logic lives in the shared `swim-validator-consumer` library (subscription lifecycle, event generation, AMQP publishing, heartbeat). This project adds ED-254-specific concerns: topic catalog, subscription filters (aerodrome designators, flight selectors), event metadata extraction, and XSD validation.
@@ -83,10 +72,6 @@ Most business logic lives in the shared `swim-validator-consumer` library (subsc
 
 The `%test` Quarkus profile disables AMQP, event generation, and heartbeat. Database uses Quarkus DevServices (auto-provisioned MariaDB via Testcontainers). No external infrastructure needed for tests.
 
-## Non-Negotiable Rules
+## Key Rules
 
-- **Never add AI co-authorship trailers** to commit messages (no Co-Authored-By for any AI tool).
-- **Never change production code to make tests pass** — investigate and fix the test or the actual bug.
-- **Never deploy without explicit user confirmation** — show the exact command and wait for YES.
-- **Diagrams in markdown must use Mermaid** — no SVG image references.
 - **Names must be unambiguous and semantically specific** — always qualify with the service domain (e.g., `ed254-consumer-validator`, never generic `consumer`).
